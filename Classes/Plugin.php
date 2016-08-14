@@ -143,7 +143,7 @@ class Plugin extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\Even
                 $html = preg_replace('/<!--[^(\[|(<!))](.*)-->/Uis', '', $html);
 
                 // Replace all whitespace characters with a single space
-                $html = preg_replace(">`\s+`<", "> <", $html);
+                $html = preg_replace("`\s+`", " ", $html);
 
                 // Remove the spaces between adjacent html tags
                 $html = preg_replace("`> <`", "><", $html);
